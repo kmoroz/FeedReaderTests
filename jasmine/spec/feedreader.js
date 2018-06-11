@@ -79,10 +79,10 @@ $(function() {
           */
         it('changes visibility when clicked', function(){
             hamburgerIcon.click();
-            expect(body.className).not.toContain('menu-hidden');
+            expect($('body').hasClass('menu-hidden')).toBe(false);
 
             hamburgerIcon.click();
-            expect(body.className).toContain('menu-hidden');
+            expect($('body').hasClass('menu-hidden')).toBe(true);
         });
 
     });
